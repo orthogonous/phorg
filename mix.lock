@@ -1,1 +1,2 @@
-%{"exexif": {:git, "https://github.com/pragdave/exexif.git", "3c7fddbb259c481430fe8e598524a870d5831d2e", []}}
+%{"exexif": {:git, "https://github.com/orthogonous/exexif.git", "cf6bf7a57392dc986d22fd5284d5aa28dfeb176b", []},
+  "poolboy": {:hex, :poolboy, "1.5.1", "6b46163901cfd0a1b43d692657ed9d7e599853b3b21b95ae5ae0a777cf9b6ca8", [:rebar], []}}

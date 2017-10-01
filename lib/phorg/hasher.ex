@@ -12,7 +12,6 @@ defmodule Phorg.Hasher do
   def handle_call(file, _from, state) do
     #{:reply, state, Map.put(state, file, md5hash(file))}
     hash = md5hash(file)
-    IO.puts "#{file} hashed to #{hash}"
     {:reply, hash, state}
   end
 
