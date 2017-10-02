@@ -52,6 +52,7 @@ defmodule Phorg do
       :ets.insert(:hash_counters, {hash, hashcounter(file, hash) + 1})
   end
 
+  # Only adds the 2nd and onwards files found. The original or first file is not considered a duplicate.
   def add_hash_duplicate(file, hash) do
     # get current list from ets 
     case :ets.lookup(:hash_duplicates, hash) do
