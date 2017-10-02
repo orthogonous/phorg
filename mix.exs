@@ -12,12 +12,12 @@ defmodule Phorg.Mixfile do
   end
 
   # Run "mix help compile.app" to learn about applications.
-  def application do
-    [
-      mod: {Phorg, []},
-      extra_applications: [:logger, :poolboy]
-    ]
-  end
+  #def application do
+  #  [
+  #    mod: {Phorg, []},
+  #    extra_applications: [:logger, :poolboy]
+  #  ]
+  #end
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
@@ -26,6 +26,8 @@ defmodule Phorg.Mixfile do
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
       {:exexif, git: "https://github.com/orthogonous/exexif.git"},
       {:poolboy, "~> 1.5.1"},
+      {:apex, "~>1.0.0"}
+
     ]
   end
 end
