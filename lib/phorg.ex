@@ -9,7 +9,6 @@ defmodule Phorg do
   @photo_path "/data/seagate-1.8/FamilyBackup/Lachlan/Photos/prues xperia compact z3/DCIM/"
 
   def startup() do
-    cleanup()
     :ets.new(:hash_values, [:set, :protected, :named_table])
     :ets.new(:hash_counters, [:set, :protected, :named_table])
     :ets.new(:hash_duplicates, [:set, :protected, :named_table])
