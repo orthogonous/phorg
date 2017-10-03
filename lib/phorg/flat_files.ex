@@ -1,4 +1,10 @@
 defmodule Phorg.FlatFiles do
+  @moduledoc """
+  functions I found somewhere online. Possibly stackoverflow
+  on how to recursively traverse a directory tree and find files
+
+  """
+
   def list_all(path) do
     _list_all(path)
   end
@@ -7,6 +13,7 @@ defmodule Phorg.FlatFiles do
     cond do
       String.contains?(path, ".mp4") -> []
       true -> expand(File.ls(path), path)
+      false -> []
     end
   end
 
@@ -19,4 +26,3 @@ defmodule Phorg.FlatFiles do
     [path]
   end
 end
-
