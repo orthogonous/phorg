@@ -6,6 +6,7 @@ defmodule Phorg.Mixfile do
       app: :phorg,
       version: "0.1.0",
       elixir: "~> 1.5",
+      test_coverage: [tool: ExCoveralls],
       start_permanent: Mix.env == :prod,
       deps: deps()
     ]
@@ -27,9 +28,8 @@ defmodule Phorg.Mixfile do
       {:exexif, git: "https://github.com/orthogonous/exexif.git"},
       {:poolboy, "~> 1.5.1"},
       {:apex, "~>1.0.0"},
-      {:credo, "~> 0.8", only: [:dev, :test], runtime: false}
-
-
+      {:credo, "~> 0.8", only: [:dev, :test], runtime: false},
+      {:excoveralls, "~> 0.7", only: :test}
     ]
   end
 end
