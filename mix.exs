@@ -26,7 +26,9 @@ defmodule Phorg.Mixfile do
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
       {:exexif, git: "https://github.com/orthogonous/exexif.git"},
       {:poolboy, "~> 1.5.1"},
-      {:apex, "~>1.0.0"}
+      {:apex, "~>1.0.0"},
+      {:credo, "~> 0.8", only: [:dev, :test], runtime: false}
+
 
     ]
   end

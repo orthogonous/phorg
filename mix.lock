@@ -1,3 +1,5 @@
 %{"apex": {:hex, :apex, "1.0.0", "abf230314d35ca4c48a902f693247f190ad42fc14862b9c4f7dbb7077b21c20a", [:mix], []},
+  "bunt": {:hex, :bunt, "0.2.0", "951c6e801e8b1d2cbe58ebbd3e616a869061ddadcc4863d0a2182541acae9a38", [:mix], []},
+  "credo": {:hex, :credo, "0.8.7", "b1aad9cd3aa7acdbaea49765bfc9f1605dc4555023a037dc9ea7a70539615bc8", [:mix], [{:bunt, "~> 0.2.0", [hex: :bunt, optional: false]}]},
   "exexif": {:git, "https://github.com/orthogonous/exexif.git", "cf6bf7a57392dc986d22fd5284d5aa28dfeb176b", []},
   "poolboy": {:hex, :poolboy, "1.5.1", "6b46163901cfd0a1b43d692657ed9d7e599853b3b21b95ae5ae0a777cf9b6ca8", [:rebar], []}}
