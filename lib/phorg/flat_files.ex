@@ -8,27 +8,17 @@ defmodule Phorg.FlatFiles do
   def list_all(path) do
     _list_all(path)
   end
-  
-  def wanted_file(path) do
-    # this should be a configurable parameter at some point
-    # FIXME
-    
-    skip_files_extensions = [".mp4", ".mp3", ".mov", ".mpeg"]
 
-    Enum.map(skip_files_extensions, &(Regex.compile!("#{&1}$"))) |> 
-    Enum.filter(&Regex.match?(&1, String.downcase(path))) |>
-    _wanted_action()
+  @skip_exts MapSet.new([".mp4", ".mp3", ".mov", ".mpeg"])
 
+  def wanted_file?(path) do
+    Path.extname(path) not in @skip_exts
   end
-
-  defp _wanted_action([]), do: true
-  defp _wanted_action(_), do: false
-
   
 
   defp _list_all(path) do
     cond do
-      wanted_file(path) -> expand(File.ls(path), path)
+      wanted_file?(path) -> expand(File.ls(path), path)
       true -> []
     end
   end

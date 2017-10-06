@@ -27,17 +27,17 @@ defmodule Phorg.FlatFilesTest do
   end
 
   test "wanted_file should return true for files we want" do
-    assert FlatFiles.wanted_file("/some/dir/file.jpg") == true
-    assert FlatFiles.wanted_file("/some/dir/file.JpG") == true
-    assert FlatFiles.wanted_file("/some/dir/file.JPG") == true
-    assert FlatFiles.wanted_file("/some/dir/file.jpeg") == true
+    assert FlatFiles.wanted_file?("/some/dir/file.jpg") == true
+    assert FlatFiles.wanted_file?("/some/dir/file.JpG") == true
+    assert FlatFiles.wanted_file?("/some/dir/file.JPG") == true
+    assert FlatFiles.wanted_file?("/some/dir/file.jpeg") == true
   end
 
   test "wanted_file should return false for files we dont want" do
-    assert FlatFiles.wanted_file("/some/dir/file.mp3") == false
-    assert FlatFiles.wanted_file("/some/dir/file.mov") == false
-    assert FlatFiles.wanted_file("/some/dir/file.mp4") == false
-    assert FlatFiles.wanted_file("/some/dir/file.mpeg") == false
+    assert FlatFiles.wanted_file?("/some/dir/file.mp3") == false
+    assert FlatFiles.wanted_file?("/some/dir/file.mov") == false
+    assert FlatFiles.wanted_file?("/some/dir/file.mp4") == false
+    assert FlatFiles.wanted_file?("/some/dir/file.mpeg") == false
   end
 
 end
